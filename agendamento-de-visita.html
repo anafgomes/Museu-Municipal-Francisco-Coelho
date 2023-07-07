@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/39ba2a09d4.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Agendamento de Visita</title>
+</head>
+
+<body>
+  <header>
+    <div class="logo-img">
+      <a href="index.html">
+        <img src="img/logo-museu.png" alt="Logo do Museu Municipal Francisco Coelho">
+      </a>
+    </div>
+
+    <div class="menu">
+      <nav>
+        <ul>
+          <li><a href="sobre-o-museu.html">Sobre o Museu</a></li>
+          <li class="dropdown">
+            <a href="">Visitação</a>
+
+            <div class="dropdown-menu">
+              <a href="agendamento-de-visita.html">Agendar visita</a>
+              <a
+                href="https://app.lapentor.com/sphere/museu-municipal-de-maraba?fbclid=IwAR0e8Bch4wh7lyPCuTTPfenTcVN4fmsuNDbdm3n8QFarzxMcDRPo6qDch4I&scene=5f3ecd4effd0e1992ca5b881">Visitação
+                em 3D</a>
+              <a href="">Programação</a>
+              <a href="">Lojinha do Chico</a>
+            </div>
+          </li>
+          <li><a href="noticias.html">Notícias</a></li>
+          <li><a href="">Pesquisas</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <br>
+  <section>
+    <span>
+      <h1>Agendamento de Visitas</h1>
+    </span>
+    <br>
+    <hr>
+    <br>
+    <div id="agendamento">
+      <div class="image-container">
+        <img src="img/img-visitacao.png" alt="Foto de visita">
+      </div>
+      <div class="form-container">
+        <h2>Qual é o tipo de visita?</h2>
+        <div class="button-container">
+          <a href="#visita-normal" class="button-visita-normal">Visita Normal</a>
+          <a href="#visita-coletiva" class="button-visita-coletiva">Visita Institucional</a>
+        </div>
+      </div>
+    </div>
+    <br><br>
+    <div id="visita-normal">
+      <span>
+        <h1>Questionário de Visita Comum</h1>
+        <br>
+        <p>Visita pelo museu até 5 pessoas por vez.</p>
+      </span>
+      <br>
+      <hr>
+      <br>
+      <div id="form-visita-normal" class="form-container">
+        <br>
+        <form>
+          <div class="input-group">
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" required>
+          </div>
+          <div class="input-group">
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" required>
+          </div>
+          <div class="input-group">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" required>
+          </div>
+          <div class="input-group">
+            <label for="horario">Horário:</label>
+            <select id="horario" required>
+              <option value="">Selecione:</option>
+              <option value="09:00">09:00</option>
+              <option value="09:30">09:30</option>
+              <option value="10:00">10:00</option>
+              <option value="10:30">10:30</option>
+              <option value="11:00">11:00</option>
+              <option value="11:30">11:30</option>
+              <option value="12:00">12:00</option>
+              <option value="12:30">12:30</option>
+              <option value="13:00">13:00</option>
+              <option value="13:30">13:30</option>
+              <option value="14:00">14:00</option>
+              <option value="14:30">14:30</option>
+              <option value="15:00">15:00</option>
+              <option value="15:30">15:30</option>
+              <option value="16:00">16:00</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label for="quantidade">Quantidade de Pessoas:</label>
+            <input type="number" id="quantidade" min="1" max="5" required>
+          </div>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br><br><br>
+    <div id="visita-coletiva">
+      <span>
+        <h1>Questionário de Visita Institucional</h1>
+        <br>
+        <p>Visita pelo museu até 10 alunos por vez, ideal para instituições de ensino.</p>
+      </span>
+      <br>
+      <hr>
+      <br>
+      <div id="form-visita-coletiva" class="form-container">
+        <form>
+          <div class="input-group">
+            <label for="escola">Nome da Instituição de Ensino:</label>
+            <input type="text" id="escola" required>
+          </div>
+          <div class="input-group">
+            <label for="responsavel">Responsável (Diretor(a)/Coordenador Pedagógico):</label>
+            <input type="text" id="responsavel" required>
+          </div>
+          <div class="input-group">
+            <label for="telefone-escola">Telefone da Escola:</label>
+            <input type="tel" id="telefone-escola" required>
+          </div>
+          <div class="input-group">
+            <label for="endereco">Endereço da Escola:</label>
+            <input type="text" id="endereco" required>
+          </div>
+          <div class="input-group">
+            <label for="horario">Horário:</label>
+            <select id="horario" required>
+              <option value="">Selecione:</option>
+              <option value="09:00">09:00</option>
+              <option value="09:30">09:30</option>
+              <option value="10:00">10:00</option>
+              <option value="10:30">10:30</option>
+              <option value="11:00">11:00</option>
+              <option value="11:30">11:30</option>
+              <option value="12:00">12:00</option>
+              <option value="12:30">12:30</option>
+              <option value="13:00">13:00</option>
+              <option value="13:30">13:30</option>
+              <option value="14:00">14:00</option>
+              <option value="14:30">14:30</option>
+              <option value="15:00">15:00</option>
+              <option value="15:30">15:30</option>
+              <option value="16:00">16:00</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label for="quantidade">Quantidade de Alunos:</label>
+            <input type="number" id="quantidade" min="1" max="10" required>
+          </div>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+  </section>
+
+
+
+  <br>
+
+  <footer>
+    <div id="footer_content">
+      <div id="footer_contacts">
+        <div id="footer_social_media">
+          <a href="https://www.instagram.com/museumaraba/" class="footer-link" id="instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+          <a href="https://www.facebook.com/MuseuMaraba/" class="footer-link" id="facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+
+          <a href="museufranciscocoelho@gmail.com" class="footer-link" id="e-mail">
+            <i class="fa-regular fa-envelope"></i>
+          </a>
+        </div>
+        <br>
+        <p>O Museu Municipal Francisco Coelho é um museu histórico brasileiro criado para preservar e apresentar de modo
+          interativo e moderno o patrimônio histórico e cultural da cidade de Marabá, Pará. A instituição está sob a
+          administração da autarquia Fundação Casa da Cultura de Marabá (FCCM), à qual pertence boa parte do acervo
+          exposto.</p>
+      </div>
+
+      <ul class="footer-list">
+        <li>
+          <h3>Setores</h3>
+        </li>
+        <li>
+          <a href="https://casadaculturademaraba.org/setores/nucleo-de-arqueologia-etnologia-e-educacao-patrimonial/"
+            class="footer-link">Núcleo de Arqueologia, Etnologia e Educação Patrimonial</a>
+        </li>
+        <li>
+          <a href="https://casadaculturademaraba.org/setores/nucleo-de-espeleologia/" class="footer-link">Núcleo de
+            Espeleologia</a>
+        </li>
+        <li>
+          <a href="http://casadaculturademaraba.org/setores/nucleo-de-geologia/" class="footer-link">Núcleo de
+            Geologia</a>
+        </li>
+        <li>
+          <a href="https://casadaculturademaraba.org/setores/nucleo-de-zoologia/" class="footer-link"> Núcleo de
+            Zoologia</a>
+        </li>
+        <li>
+          <a href="https://casadaculturademaraba.org/setores/nucleo-de-botanica/" class="footer-link"> Núcleo de
+            Botânica</a>
+        </li>
+      </ul>
+
+      <ul class="footer-list">
+        <li>
+          <h3>Gestão</h3>
+        </li>
+        <li>
+          <a href="" class="footer-link">Quem somos</a>
+        </li>
+      </ul>
+
+    </div>
+
+    <div id="footer_end">
+    </div>
+  </footer>
+
+</body>
+
+</html>
