@@ -116,8 +116,5 @@ document.addEventListener("DOMContentLoaded", function () {
   const allData = getAllData();
   console.log(allData);
 
-  const newData = { ...allData[0], escola: "Nova Escola" };
-  updateData(0, newData);
-
   deleteData(1);
 });
