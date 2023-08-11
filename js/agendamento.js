@@ -113,8 +113,4 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem("visitaData", JSON.stringify(data));
   }
 
-  const allData = getAllData();
-  console.log(allData);
-
-  deleteData(1);
 });
