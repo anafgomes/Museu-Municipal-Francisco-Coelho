@@ -9,8 +9,6 @@ body {
   background-size: 100%;
 }
 
-/* HEADER */
-
 header {
   width: 100%;
   background-color: #FFD147;
@@ -26,7 +24,7 @@ header {
   height: 75px;
 }
 
-.menu nav li {
+.menu li {
   display: inline-block;
   margin: 0 10px;
 }
@@ -45,6 +43,8 @@ header {
 
 .menu li a:hover {
   color: #000000;
+  background-color: #FFE98A;
+  border-radius: 10px;
 }
 
 .dropdown-menu {
@@ -64,37 +64,46 @@ header {
   display: block;
 }
 
-nav li a:hover {
-  background-color: #FFE98A;
-}
+/* MENU - HAMBURGUER */
 
-@media screen and (max-width: 768px) {
-  header {
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    background-color: #ffe677;
+    position: absolute;
+    top: 99px;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu li {
+    margin: 20px 0;
+    display: block;
+  }
+
+  .hamburguer {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 20px;
   }
 
-  .menu {
-    margin-top: 10px;
-  }
-
-  .dropdown-menu {
-    position: relative;
-    display: none;
-    margin-top: 10px;
-  }
-
-  .dropdown:focus .dropdown-menu {
-    display: block;
-  }
-
-  .dropdown-menu a {
-    display: block;
+  .bar {
+    width: 30px;
+    height: 3px;
+    background-color: #000000;
+    border-radius: 10px;
+    margin: 3px 0;
   }
 }
-
-/* SECTION */
 
 section {
   margin: 0 auto;
@@ -105,6 +114,63 @@ section {
 section span h1 {
   font-family: 'Montserrat', sans-serif;
   font-size: 40px;
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.9s ease-in-out;
+  overflow: hidden;
+}
+
+.slider img {
+  flex-shrink: 0;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.slider-controls {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.prev-slide,
+.next-slide {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.slide-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  background-color: #d3d3d3;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.indicator.active {
+  background-color: #ffe677;
 }
 
 .conteudo .museu-apresentacao img {
@@ -185,6 +251,7 @@ section span h1 {
 .como-chegar span iframe {
   width: 100%;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 10px;
 }
 
 @media screen and (max-width: 768px) {
@@ -234,10 +301,6 @@ section span h1 {
     font-size: 16px;
   }
 }
-
-
-
-/* FOOTER */
 
 
 footer {
@@ -327,200 +390,4 @@ footer {
     grid-template-columns: repeat(1, 1fr);
     padding: 3rem 2rem;
   }
-}
-
-/* NOTICIAS */
-
-#noticias span h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 40px;
-  font-weight: bold;
-}
-
-/* AGENDAMENTO */
-
-#agendamento {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.image-container {
-  float: left;
-  margin-right: 100px;
-}
-
-.image-container img {
-  height: 500px;
-  width: auto;
-}
-
-.form-container {
-  overflow: hidden;
-}
-
-#agendamento h2 {
-  text-align: center;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.button-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
-}
-
-.button-visita-normal,
-.button-visita-coletiva {
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 16px;
-  font-family: 'Montserrat', sans-serif;
-  text-decoration: none;
-  text-align: center;
-  font-weight: bold;
-  color: #000000;
-  cursor: pointer;
-  margin-bottom: 10px;
-  transition: background-color 0.3s ease;
-  border-radius: 20px;
-}
-
-.button-visita-normal:hover {
-  background-color: #000000;
-  color: #FFFFFF;
-}
-
-.button-visita-coletiva:hover {
-  background-color: #000000;
-  color: #FFFFFF;
-}
-
-.button-visita-normal {
-  background-color: #11F2A7;
-}
-
-.button-visita-coletiva {
-  background-color: #FFE98A;
-}
-
-
-/* VISITA*/
-#form-visita-normal,
-#form-visita-coletiva {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-#visita-normal,
-#visita-coletiva span {
-  font-family: 'Montserrat', sans-serif;
-}
-
-
-.form-container {
-  margin-top: 20px;
-  width: 100%;
-  border: 1px solid #ccc;
-  border-radius: 30px;
-  padding: 20px;
-}
-
-.form-container h3 {
-  text-align: center;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.form-container form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.input-group {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 15px;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.input-group label {
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.input-group input,
-.input-group select {
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-button[type="submit"] {
-  font-family: 'Montserrat', sans-serif;
-  padding: 10px 20px;
-  font-size: 16px;
-  text-decoration: none;
-  text-align: center;
-  font-weight: bold;
-  background-color: #FFE98A;
-  color: #000000;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-
-button[type="submit"]:hover {
-  background-color: #000000;
-  color: #FFFFFF;
-}
-
-
-
-/* SOBRE O MUSEU */
-
-.item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 2rem;
-}
-
-.item img {
-  flex: 0 0 30%;
-  margin-right: 2rem;
-  width: 50px;
-  height: 200px;
-}
-
-.item-text {
-  flex: 1;
-}
-
-.museum-section .apresentacao h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-  font-size: 40px;
-}
-
-.museum-section .apresentacao p {
-  font-family: 'Montserrat', sans-serif;
-  text-align: justify;
-}
-
-.museum-section h2 {
-  font-family: 'Montserrat', sans-serif;
-  color: #000000;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
-.museum-section p {
-  font-family: 'Montserrat', sans-serif;
-  color: #000000;
 }

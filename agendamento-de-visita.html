@@ -9,12 +9,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/agendamento.css">
 
   <title>Agendamento de Visita</title>
 </head>
 
 <body>
+  <div class="aviso-overlay" id="aviso-overlay"></div>
   <header>
     <div class="logo-img">
       <a href="index.html">
@@ -22,8 +23,14 @@
       </a>
     </div>
 
-    <div class="menu">
-      <nav>
+    <div class="hamburguer">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+
+    <nav>
+      <div class="menu">
         <ul>
           <li><a href="sobre-o-museu.html">Sobre o Museu</a></li>
           <li class="dropdown">
@@ -31,8 +38,8 @@
 
             <div class="dropdown-menu">
               <a href="agendamento-de-visita.html">Agendar visita</a>
-              <a
-                href="https://app.lapentor.com/sphere/museu-municipal-de-maraba?fbclid=IwAR0e8Bch4wh7lyPCuTTPfenTcVN4fmsuNDbdm3n8QFarzxMcDRPo6qDch4I&scene=5f3ecd4effd0e1992ca5b881">Visitação
+              <a href="https://app.lapentor.com/sphere/museu-municipal-de-maraba?fbclid=IwAR0e8Bch4wh7lyPCuTTPfenTcVN4fmsuNDbdm3n8QFarzxMcDRPo6qDch4I&scene=5f3ecd4effd0e1992ca5b881"
+                target="_blank">Visitação
                 em 3D</a>
               <a href="">Programação</a>
               <a href="">Lojinha do Chico</a>
@@ -41,8 +48,8 @@
           <li><a href="noticias.html">Notícias</a></li>
           <li><a href="">Pesquisas</a></li>
         </ul>
-      </nav>
-    </div>
+      </div>
+    </nav>
   </header>
   <br>
   <section>
@@ -59,63 +66,9 @@
       <div class="form-container">
         <h2>Qual é o tipo de visita?</h2>
         <div class="button-container">
-          <a href="#visita-normal" class="button-visita-normal">Visita Normal</a>
+          <a class="button-visita-normal">Visita Normal</a>
           <a href="#visita-coletiva" class="button-visita-coletiva">Visita Institucional</a>
         </div>
-      </div>
-    </div>
-    <br><br>
-    <div id="visita-normal">
-      <span>
-        <h1>Questionário de Visita Comum</h1>
-        <br>
-        <p>Visita pelo museu até 5 pessoas por vez.</p>
-      </span>
-      <br>
-      <hr>
-      <br>
-      <div id="form-visita-normal" class="form-container">
-        <br>
-        <form>
-          <div class="input-group">
-            <label for="nome">Nome Completo:</label>
-            <input type="text" id="nome" required>
-          </div>
-          <div class="input-group">
-            <label for="telefone">Telefone:</label>
-            <input type="tel" id="telefone" required>
-          </div>
-          <div class="input-group">
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" required>
-          </div>
-          <div class="input-group">
-            <label for="horario">Horário:</label>
-            <select id="horario" required>
-              <option value="">Selecione:</option>
-              <option value="09:00">09:00</option>
-              <option value="09:30">09:30</option>
-              <option value="10:00">10:00</option>
-              <option value="10:30">10:30</option>
-              <option value="11:00">11:00</option>
-              <option value="11:30">11:30</option>
-              <option value="12:00">12:00</option>
-              <option value="12:30">12:30</option>
-              <option value="13:00">13:00</option>
-              <option value="13:30">13:30</option>
-              <option value="14:00">14:00</option>
-              <option value="14:30">14:30</option>
-              <option value="15:00">15:00</option>
-              <option value="15:30">15:30</option>
-              <option value="16:00">16:00</option>
-            </select>
-          </div>
-          <div class="input-group">
-            <label for="quantidade">Quantidade de Pessoas:</label>
-            <input type="number" id="quantidade" min="1" max="5" required>
-          </div>
-          <button type="submit">Enviar</button>
-        </form>
       </div>
     </div>
     <br>
@@ -149,6 +102,10 @@
             <input type="text" id="endereco" required>
           </div>
           <div class="input-group">
+            <label for="data">Data:</label>
+            <input type="date" id="data" required>
+          </div>
+          <div class="input-group">
             <label for="horario">Horário:</label>
             <select id="horario" required>
               <option value="">Selecione:</option>
@@ -175,12 +132,15 @@
           </div>
           <button type="submit">Enviar</button>
         </form>
+        <div id="message-container"></div>
       </div>
   </section>
+  <div id="aviso-visita-normal" class="aviso">
+    <span class="fechar-aviso" id="fechar-aviso">&times;</span>
+    <img src="img/aviso-visita-normal.png" alt="Aviso Visita Normal">
+  </div>
 
-
-
-  <br>
+  <br><br>
 
   <footer>
     <div id="footer_content">
@@ -247,5 +207,8 @@
   </footer>
 
 </body>
+
+<script src="js/agendamento.js">
+</script>
 
 </html>

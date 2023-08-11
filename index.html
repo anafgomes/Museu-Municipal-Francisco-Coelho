@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 
   <title>Museu Municipal Francisco Coelho</title>
 </head>
@@ -22,8 +22,14 @@
       </a>
     </div>
 
-    <div class="menu">
-      <nav>
+    <div class="hamburguer">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+
+    <nav>
+      <div class="menu">
         <ul>
           <li><a href="sobre-o-museu.html">Sobre o Museu</a></li>
           <li class="dropdown">
@@ -41,8 +47,8 @@
           <li><a href="noticias.html">Notícias</a></li>
           <li><a href="">Pesquisas</a></li>
         </ul>
-      </nav>
-    </div>
+      </div>
+    </nav>
   </header>
 
   <br>
@@ -55,8 +61,21 @@
     <hr>
     <br>
     <div class="conteudo">
-      <div class="museu-apresentacao">
-        <img src="img/museu-img-inicio.jpg" alt="">
+      <div class="slider-container">
+        <div class="slider">
+          <img src="img/museu-img-inicio.jpg" alt="Imagem 1">
+          <img src="img/museu-francisco-coelho.jpg" alt="Imagem 2">
+          <img src="img/museu-img-inicio.jpg" alt="Imagem 3">
+        </div>
+        <div class="slider-controls">
+          <div class="prev-slide">&#10094;</div>
+          <div class="next-slide">&#10095;</div>
+        </div>
+        <div class="slide-indicators">
+          <div class="indicator" onclick="changeSlide(0)"></div>
+          <div class="indicator" onclick="changeSlide(1)"></div>
+          <div class="indicator" onclick="changeSlide(2)"></div>
+        </div>
       </div>
       <span>
         <br><br>
@@ -171,5 +190,6 @@
   </footer>
 
 </body>
+<script src="js/script.js"></script>
 
 </html>
