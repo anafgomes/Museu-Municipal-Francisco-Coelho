@@ -5,7 +5,7 @@
 }
 
 body {
-  background-image: url(/img/background-site.jpg);
+  background-image: url(img/background-site.jpg);
   background-size: 100%;
 }
 
@@ -126,7 +126,6 @@ section span h1 {
 .slider {
   display: flex;
   transition: transform 0.9s ease-in-out;
-  overflow: hidden;
 }
 
 .slider img {
@@ -374,7 +373,7 @@ footer {
 }
 
 #footer_end {
-  background-image: url(img/background-ladrilho.png);
+  background-image: url(/img/background-ladrilho.png);
   padding: 50px;
 }
 

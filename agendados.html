@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/39ba2a09d4.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/agendados.css">
+
+  <title>Museu Municipal Francisco Coelho</title>
+</head>
+
+<body>
+  <header>
+    <div class="logo-img">
+      <a href="index.html">
+        <img src="img/logo-museu.png" alt="Logo do Museu Municipal Francisco Coelho">
+      </a>
+    </div>
+
+    <nav>
+      <div class="menu">
+        <ul>
+          <li><a href="index.html">Sair</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <section>
+    <span>
+      <h1>Gerenciamento de agendamentos</h1>
+    </span>
+    <br>
+    <hr>
+    <br>
+    <table id="tableAgendamento" class="records">
+      <thead>
+        <tr>
+          <th>Escola</th>
+          <th>Responsável</th>
+          <th>Telefone</th>
+          <th>Endereço</th>
+          <th>Data</th>
+          <th>Horário</th>
+          <th>Quantidade de Alunos</th>
+          <th>Realizar ação</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <header class="modal-header">
+          <h2>Novo Agendamento</h2>
+          <span class="modal-close" id="modalClose">&#10006;</span>
+        </header>
+        <form id="form" class="modal-form">
+          <div class="input-group">
+            <label for="escola">Nome da Instituição de Ensino:</label>
+            <input type="text" id="escola" required>
+          </div>
+          <div class="input-group">
+            <label for="responsavel">Responsável (Diretor(a)/Coordenador Pedagógico):</label>
+            <input type="text" id="responsavel" required>
+          </div>
+          <div class="input-group">
+            <label for="telefone-escola">Telefone da Escola:</label>
+            <input type="tel" id="telefone-escola" required>
+          </div>
+          <div class="input-group">
+            <label for="endereco">Endereço da Escola:</label>
+            <input type="text" id="endereco" required>
+          </div>
+          <div class="input-group">
+            <label for="data">Data:</label>
+            <input type="date" id="data" required>
+          </div>
+          <div class="input-group">
+            <label for="horario">Horário:</label>
+            <select id="horario" required>
+              <option value="">Selecione:</option>
+              <option value="09:00">09:00</option>
+              <option value="09:30">09:30</option>
+              <option value="10:00">10:00</option>
+              <option value="10:30">10:30</option>
+              <option value="11:00">11:00</option>
+              <option value="11:30">11:30</option>
+              <option value="12:00">12:00</option>
+              <option value="12:30">12:30</option>
+              <option value="13:00">13:00</option>
+              <option value="13:30">13:30</option>
+              <option value="14:00">14:00</option>
+              <option value="14:30">14:30</option>
+              <option value="15:00">15:00</option>
+              <option value="15:30">15:30</option>
+              <option value="16:00">16:00</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label for="quantidade">Quantidade de Alunos:</label>
+            <input type="number" id="quantidade" min="5" max="10" required>
+          </div>
+          <button id="salvar" class="button green">Salvar</button>
+          <button id="cancelar" class="button blue">Cancelar</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+  <script src="js/agendados.js">
+
+  </script>
+</body>

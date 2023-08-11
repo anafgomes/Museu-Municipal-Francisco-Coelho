@@ -423,7 +423,6 @@ footer {
     height: 100%;
   }
 
-  /* AGENDAMENTO */
 
   #agendamento {
     display: flex;
@@ -492,7 +491,6 @@ footer {
   }
 
 
-  /* VISITA*/
   #form-visita-normal,
   #form-visita-coletiva {
     display: flex;
@@ -567,9 +565,6 @@ footer {
     color: #FFFFFF;
   }
 
-
-
-  /* SOBRE O MUSEU */
 
   .item {
     display: flex;
