@@ -120,6 +120,7 @@ section span h1 {
   position: relative;
   width: 100%;
   border-radius: 10px;
+  overflow: hidden;
 }
 
 .slider {
