@@ -1,0 +1,195 @@
+section {
+  margin: 0 auto;
+  width: 80%;
+  height: 100%;
+}
+
+section span h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.9s ease-in-out;
+}
+
+.slider img {
+  flex-shrink: 0;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.slider-controls {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.prev-slide,
+.next-slide {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.slide-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  background-color: #d3d3d3;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.indicator.active {
+  background-color: #ffe677;
+}
+
+.conteudo .museu-apresentacao img {
+  width: 100%;
+  height: 50%;
+}
+
+.conteudo h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.news-card {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  position: relative;
+  overflow: hidden;
+}
+
+.news-card p {
+  text-align: justify;
+}
+
+.news-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.news-card:hover img {
+  transform: scale(1.1);
+}
+
+.news-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.news-card p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.btn-leia-mais {
+  display: inline-block;
+  background-color: #FFD147;
+  color: #000000;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-leia-mais:hover {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+.como-chegar h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.como-chegar span iframe {
+  width: 100%;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  section span h1 {
+    font-size: 24px;
+  }
+
+  section .conteudo span h1 {
+    font-size: 24px;
+  }
+
+  .como-chegar h1 {
+    font-size: 24px;
+  }
+
+  .news-card {
+    width: auto;
+    margin-bottom: 20px;
+  }
+
+  iframe {
+    width: 100%;
+    height: 300px;
+  }
+
+  #noticias span h1 {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  h1 {
+    font-size: 16px;
+  }
+
+  .news-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  iframe {
+    width: 100%;
+    height: 400px;
+  }
+
+  #noticias span h1 {
+    font-size: 16px;
+  }
+}

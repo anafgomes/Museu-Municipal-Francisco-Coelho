@@ -5,8 +5,9 @@
 }
 
 body {
-  background-image: url(img/background-site.jpg);
-  background-size: 100%;
+  background-image: url(../img/background-site.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 header {
@@ -105,52 +106,6 @@ header {
   }
 }
 
-section {
-  margin: 0 auto;
-  width: 80%;
-  height: 100%;
-}
-
-.item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 2rem;
-}
-
-.item img {
-  flex: 0 0 30%;
-  margin-right: 2rem;
-  width: 50px;
-  height: 200px;
-}
-
-.item-text {
-  flex: 1;
-}
-
-.museum-section .apresentacao h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-  font-size: 40px;
-}
-
-.museum-section .apresentacao p {
-  font-family: 'Montserrat', sans-serif;
-  text-align: justify;
-}
-
-.museum-section h2 {
-  font-family: 'Montserrat', sans-serif;
-  color: #000000;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
-.museum-section p {
-  font-family: 'Montserrat', sans-serif;
-  color: #000000;
-}
-
 footer {
   width: 100%;
   color: #FFFFFF;
@@ -222,7 +177,7 @@ footer {
 }
 
 #footer_end {
-  background-image: url(/img/background-ladrilho.png);
+  background-image: url(../img/background-ladrilho.png);
   padding: 50px;
 }
 

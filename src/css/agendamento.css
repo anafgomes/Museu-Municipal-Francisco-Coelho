@@ -1,0 +1,398 @@
+section {
+  margin: 0 auto;
+  width: 80%;
+  height: 100%;
+}
+
+section span h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+}
+
+#visita-coletiva span p {
+  font-family: 'Montserrat', sans-serif;
+}
+
+#agendamento {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#message-container {
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 5px;
+}
+
+.image-container {
+  float: left;
+  margin-right: 100px;
+}
+
+.image-container img {
+  height: 500px;
+  width: auto;
+}
+
+.form-container {
+  overflow: hidden;
+}
+
+#agendamento h2 {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.button-visita-normal,
+.button-visita-coletiva {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  color: #000000;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+  border-radius: 20px;
+}
+
+.button-visita-normal:hover {
+  background-color: #d0d0d0;
+  color: #FFFFFF;
+}
+
+.button-visita-coletiva:hover {
+  background-color: #d0d0d0;
+  color: #FFFFFF;
+}
+
+.button-visita-normal {
+  background-color: #11F2A7;
+}
+
+.button-visita-coletiva {
+  background-color: #FFE98A;
+}
+
+.aviso {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+
+#form-visita-normal,
+#form-visita-coletiva {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-visita-normal,
+.button-visita-coletiva span h1 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+.form-container {
+  margin-top: 20px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  padding: 20px;
+}
+
+.form-container h3 {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.input-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group select {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+  font-family: 'Montserrat', sans-serif;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  background-color: #FFE98A;
+  color: #000000;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+button[type="submit"]:hover {
+  background-color: #d0d0d0;
+  color: #FFFFFF;
+}
+
+.aviso {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.fechar-aviso {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 50px;
+  cursor: pointer;
+}
+
+#aviso-visita-normal img {
+  width: 400px;
+  height: 400px;
+  padding: 0;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .aviso {
+    width: auto;
+    height: auto;
+  }
+
+  .fechar-aviso {
+    font-size: 40px;
+  }
+
+  #aviso-visita-normal img {
+    width: 300px;
+    height: 300px;
+    padding: 0;
+    border-radius: 10px;
+  }
+}
+
+#agendamento {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-container {
+  float: left;
+  margin-right: 100px;
+}
+
+.image-container img {
+  height: 500px;
+  width: auto;
+}
+
+.form-container {
+  overflow: hidden;
+}
+
+#agendamento h2 {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.button-visita-normal,
+.button-visita-coletiva {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  color: #000000;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+  border-radius: 20px;
+}
+
+.button-visita-normal:hover {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+.button-visita-coletiva:hover {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+.button-visita-normal {
+  background-color: #11F2A7;
+}
+
+.button-visita-coletiva {
+  background-color: #FFE98A;
+}
+
+
+#form-visita-normal,
+#form-visita-coletiva {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#visita-normal,
+#visita-coletiva span {
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+.form-container {
+  margin-top: 20px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  padding: 20px;
+}
+
+.form-container h3 {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.input-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group select {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+  font-family: 'Montserrat', sans-serif;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  background-color: #FFE98A;
+  color: #000000;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+button[type="submit"]:hover {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+
+.item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.item img {
+  flex: 0 0 30%;
+  margin-right: 2rem;
+  width: 50px;
+  height: 200px;
+}
+
+.item-text {
+  flex: 1;
+}
+
+.museum-section .apresentacao h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.museum-section .apresentacao p {
+  font-family: 'Montserrat', sans-serif;
+  text-align: justify;
+}
+
+.museum-section h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: #000000;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.museum-section p {
+  font-family: 'Montserrat', sans-serif;
+  color: #000000;
+}
