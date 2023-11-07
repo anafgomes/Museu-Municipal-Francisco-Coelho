@@ -1,0 +1,36 @@
+POST http://localhost:3000/api/agendamentos
+Content-Type: application/json
+
+{
+    "escola": "EMEF Emilia Gadelho",
+    "responsavel": "responsavel teste",
+    "telefone": "123-456-7890",
+    "endereco": "456 Rua da Escola",
+    "horario": "10:00",
+    "quantidade": 8,
+    "data": "2023-11-15"
+}
+
+###
+
+GET http://localhost:3000/api/agendamentos
+
+###
+GET http://localhost:3000/api/agendamentos/654a1e8910a666ec3f5d4b53
+
+###
+DELETE http://localhost:3000/api/agendamentos/654a1e8910a666ec3f5d4b53
+
+####
+PUT http://localhost:3000/api/agendamentos/654a1f2210a666ec3f5d4b55
+Content-Type: application/json
+
+{
+    "escola": "TESTE ATUALIZAÇÃO",
+    "responsavel": "ANA GOMES",
+    "telefone": "123-456-7890",
+    "endereco": "456 Rua da Escola",
+    "horario": "11:00",
+    "quantidade": 8,
+    "data": "2023-11-15"
+}
